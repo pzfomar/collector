@@ -20,8 +20,8 @@ public class AccountApi {
     private RegisterEmailService registerEmailService;
 
     @PostMapping("/register-email.json")
-    public Mono<ResponseEntity<RegisterEmailDto.Response>> registerEmail(@RequestBody RegisterEmailDto.Request request) {
-        return registerEmailService.bussines();
+    public Mono<ResponseEntity<RegisterEmailDto.Response>> registerEmail(@RequestBody RegisterEmailDto.Request request) throws Exception {
+        return registerEmailService.bussines(request);
     }
 
     @PostMapping("/register-facebook.json")
