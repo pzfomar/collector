@@ -34,5 +34,5 @@ $CONTAINER tag $IMAGE:$TAG $IMAGE:$LATEST
 
 echo "---------------------------------[ Building the container         ]---------------------------------"
 cd $KUBE_PATH
-#$CONTAINER compose down
-#$CONTAINER compose up -d
+$CONTAINER compose down
+$CONTAINER compose up -d
