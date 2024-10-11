@@ -3,7 +3,7 @@ package com.bds.collector.application.account.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.crypto.password.PasswordEncoder;
+//import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.bds.collector.application.account.dto.RegisterEmailDto.Response;
@@ -18,8 +18,8 @@ public class RegisterEmailService {
     @Autowired
     private AccountRepository accountRepository;
 
-    @Autowired
-    private PasswordEncoder passwordEncoder;
+    //@Autowired
+    //private PasswordEncoder passwordEncoder;
     
     public Mono<ResponseEntity<Response>> bussines(Request request) throws Exception {
         if (!request.getTermCondition().isConfirm()) {
@@ -32,7 +32,7 @@ public class RegisterEmailService {
 
         return accountRepository.save(AccountModel.builder()
                 .email(request.getEmail())
-                .password(passwordEncoder.encode(request.getPassword()))
+                //.password(passwordEncoder.encode(request.getPassword()))
                 .build())
                 .map(account -> ResponseEntity.status(HttpStatus.CREATED).body(Response.builder().build()));
     }
