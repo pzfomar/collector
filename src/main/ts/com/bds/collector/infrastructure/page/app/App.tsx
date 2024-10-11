@@ -4,7 +4,7 @@ import viteLogo from '../../assets/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = createSignal(0)
+  const [count, setCount] = createSignal(0);
 
   return (
     <>
@@ -29,7 +29,7 @@ function App() {
         Click on the Vite and Solid logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

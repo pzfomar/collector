@@ -20,7 +20,7 @@ export default defineConfig({
   },
   build: {
     outDir: 'src/main/resources/static/',
-    emptyOutDir: false,
+    emptyOutDir: true,
     rollupOptions: {
       //input: 'templates/index.html',
       output: {
