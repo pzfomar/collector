@@ -23,6 +23,7 @@ LATEST=latest
 [ -d data ] || mkdir data
 
 echo "---------------------------------[ Building the nodejs project    ]---------------------------------"
+$NPM install
 $NPM run build
 
 echo "---------------------------------[ Building the maven project     ]---------------------------------"
