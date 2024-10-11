@@ -38,4 +38,4 @@ dist-ssr
 *.sln
 *.sw?
 
-src/main/resources/static/*/index.*
+src/main/resources/static/**/index.*
